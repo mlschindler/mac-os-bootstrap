@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Installing Homebrew!"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Installing Ansible!"
+brew install ansible
