@@ -1,0 +1,59 @@
+directories:
+  - Repos
+  - Repos/personal
+  - Repos/work
+
+
+git_tools:
+  - name: powerlevel10k
+    repo_url: https://github.com/romkatv/powerlevel10k.git
+    dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
+
+homebrew_repos:
+  - aws/tap
+  - homebrew/casks-fonts
+
+homebrew_tools:
+  - awscli
+  - aws-sam-cli
+  - bat
+  - cowsay
+  - curl
+  - diff-so-fancy
+  - exa
+  - figlet
+  - fzf
+  - git
+  - htop
+  - jq
+  - kubernetes-cli
+  - nmap
+  - p7zip
+  - packer
+  - pstree
+  - pwgen
+  - readline
+  - reattach-to-user-namespace
+  - shellcheck
+  - tfenv
+  - tflint
+  - thefuck
+  - tmux
+  - tree
+  - vault
+  - watch
+  - wget
+  - wtfutil
+
+
+homebrew_casks:
+  - font-hack-nerdfont
+  - iterm2
+  - slack
+  - authy
+  - signal
+
+pip_tools:
+  - virtualenv
+  - virtualenvwrapper
+  - git-up
