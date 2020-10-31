@@ -1,4 +1,6 @@
 directories:
+  - .aws
+  - .cfg
   - Repos
   - Repos/personal
   - Repos/work
@@ -8,6 +10,7 @@ git_tools:
   - name: powerlevel10k
     repo_url: https://github.com/romkatv/powerlevel10k.git
     dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
+  - name: dotfiles
 
 homebrew_repos:
   - aws/tap

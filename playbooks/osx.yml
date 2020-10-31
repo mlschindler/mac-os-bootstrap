@@ -66,3 +66,13 @@
       tags:
         - pip_install
 
+## Clone dotfiles and notity handler
+    - name: Get dotfiles
+      git:
+        repo: "git@github.com:mlschindler/dotfiles.git"
+        dest: "~/.cfg"
+        clone: yes
+        bare: yes
+      notify: source_config
+      tags:
+        - get_dotfiles
