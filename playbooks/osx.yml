@@ -24,7 +24,7 @@
       file:
         path: "~/{{ item }}"
         state: directory
-      loop: "{{ directories|flatten(levels=1) }}"
+      loop: "{{ directories }}"
       tags:
         - create directories
 
@@ -34,7 +34,7 @@
       homebrew_tap:
         name: "{{ item }}"
         state: present
-      loop: "{{ homebrew_repos|flatten(levels=1) }}"
+      loop: "{{ homebrew_repos }}"
       tags:
         - tap_homebrew
 
@@ -44,7 +44,7 @@
       homebrew:
         name: "{{ item }}"
         state: present
-      loop: "{{ homebrew_tools|flatten(levels=1) }}"
+      loop: "{{ homebrew_tools }}"
       tags:
         - install_homebrew_tools
 
@@ -52,7 +52,7 @@
       homebrew_cask:
         name: "{{ item }}"
         state: present
-      loop: "{{ homebrew_casks|flatten(levels=1) }}"
+      loop: "{{ homebrew_casks }}"
       tags:
         - install_casks
 
@@ -62,7 +62,7 @@
         name: "{{ item }}"
       become: yes
       become_method: sudo
-      loop: "{{ pip_tools|flatten(levels=1)  }}"
+      loop: "{{ pip_tools }}"
       tags:
         - pip_install
 
