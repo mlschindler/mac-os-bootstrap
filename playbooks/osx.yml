@@ -76,3 +76,19 @@
       notify: source_config
       tags:
         - get_dotfiles
+
+## Clone git tools
+    - name: Clone git tools
+      git:
+        repo: "{{ item.repo_url }}"
+        dest: "{{ item.dest }}"
+        update: yes
+      loop: "{{ git_tools }}"
+      tags:
+        - install_git_tools
+
+## Handlers
+  handlers:
+    - name: source_config
+      command: . ../dotfiles.sh
+
