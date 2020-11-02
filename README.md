@@ -13,3 +13,4 @@ I need to learn Ansible and could do to get a bit better and general bash script
 ## Credit where credit is due: 
 - [the-real-cphillips](https://github.com/the-real-cphillips)
 - [dstreby](https://github.com/dstreby)
+- [How to store your dotfiles](https://www.atlassian.com/git/tutorials/dotfiles)
