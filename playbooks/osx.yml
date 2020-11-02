@@ -77,6 +77,16 @@
       tags:
         - get_dotfiles
 
+## Clone POWERLEVEL10K
+    - name: Get p10k
+      git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
+        clone: yes
+        depth: 1
+      tags:
+        - p10k
+
 ## Clone git tools
     - name: Clone git tools
       git:
@@ -86,9 +96,11 @@
       loop: "{{ git_tools }}"
       tags:
         - install_git_tools
+      notify: Install Vim Plugins
 
 ## Handlers
   handlers:
     - name: source_config
       command: . ../dotfiles.sh
-
+    - name: Install Vim Plugins
+      command: vim +PluginInstall +qall

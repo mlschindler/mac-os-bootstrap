@@ -7,12 +7,12 @@ directories:
 
 
 git_tools:
-  - name: powerlevel10k
-    repo_url: https://github.com/romkatv/powerlevel10k.git
-    dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
   - name: tmux-themepack
     repo_url: https://github.com/jimeh/tmux-themepack.git
     dest: ~/.tmux-themepack
+  - name: Vundle
+    repo_url: https://github.com/VundleVim/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
 
 homebrew_repos:
   - aws/tap
