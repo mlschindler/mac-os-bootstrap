@@ -1,0 +1,106 @@
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: Include vars
+      include_vars: vars.yml
+      tags:
+        - include_vars
+## Get Username
+    - name: Get user
+      command: whoami
+      register: username
+      tags:
+        - get_user_name
+      changed_when: False
+## Debug msg for current user
+    - debug:
+       msg: "Current user: {{ username.stdout }}"
+      tags:
+       - get_user_name
+      ignore_errors: "{{ ansible_check_mode }}"
+
+## Create dirs....
+    - name: Create directories
+      file:
+        path: "~/{{ item }}"
+        state: directory
+      loop: "{{ directories }}"
+      tags:
+        - create directories
+
+## Tap homebrew repos
+
+    - name: Tap Homebrew Repos
+      homebrew_tap:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ homebrew_repos }}"
+      tags:
+        - tap_homebrew
+
+## Homebrew installs
+
+    - name: Install homebrew tools
+      homebrew:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ homebrew_tools }}"
+      tags:
+        - install_homebrew_tools
+
+    - name: install homebrew casks
+      homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ homebrew_casks }}"
+      tags:
+        - install_casks
+
+## PIP installs          
+    - name: PIP installs
+      pip:
+        name: "{{ item }}"
+      become: yes
+      become_method: sudo
+      loop: "{{ pip_tools }}"
+      tags:
+        - pip_install
+
+## Clone dotfiles and notity handler
+    - name: Get dotfiles
+      git:
+        repo: "git@github.com:mlschindler/dotfiles.git"
+        dest: "~/.cfg"
+        clone: yes
+        bare: yes
+      notify: source_config
+      tags:
+        - get_dotfiles
+
+## Clone POWERLEVEL10K
+    - name: Get p10k
+      git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
+        clone: yes
+        depth: 1
+      tags:
+        - p10k
+
+## Clone git tools
+    - name: Clone git tools
+      git:
+        repo: "{{ item.repo_url }}"
+        dest: "{{ item.dest }}"
+        update: yes
+      loop: "{{ git_tools }}"
+      tags:
+        - install_git_tools
+      notify: Install Vim Plugins
+
+## Handlers
+  handlers:
+    - name: source_config
+      command: . ../dotfiles.sh
+    - name: Install Vim Plugins
+      command: vim +PluginInstall +qall

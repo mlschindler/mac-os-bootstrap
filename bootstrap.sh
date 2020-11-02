@@ -32,7 +32,10 @@ if [ -d ${HOME}/.oh-my-zsh ]; then
   echo -e "${GREEN}[+]${NC} ${YELLOW} Oh-My-Zsh already installed!${NC}"
 else
   echo -e "${GREEN}[+]${NC} Installing Oh-My-Zsh..."
-  brew install ansible \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" \
   && echo -e "${GREEN}[+]${NC} Oh-My-Zsh successfully installed!" \
   || echo -e "${RED}[X]${NC} Oh-My-Zsh install failed..."
 fi
+
+# Ansible install all the shit
+ansible-playbook --ask-become-pass playbooks/osx.yml
