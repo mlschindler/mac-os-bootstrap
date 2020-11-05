@@ -39,9 +39,3 @@ fi
 
 # Ansible install all the shit
 ansible-playbook --ask-become-pass playbooks/osx.yml
-
-# Download Docker Desktop for Mac (duh)
-echo -e "${GREEN}[+]${NC} Downloading Docker Desktop..."
-wget -O ~/Desktop/docker_desktop.dmg "https://desktop.docker.com/mac/stable/Docker.dmg" \
-  && echo -e "${GREEN}[+]${NC} Docker Desktop Downloaded to ~/Desktop, ready for GUI install!" \
-  || echo -e "${RED}[X]${NC} Docker Desktop download failed..."

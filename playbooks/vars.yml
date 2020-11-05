@@ -58,6 +58,7 @@ homebrew_casks:
   - authy
   - signal
   - google-cloud-sdk
+  - docker
 
 pip_tools:
   - virtualenv
