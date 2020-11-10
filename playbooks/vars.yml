@@ -16,7 +16,7 @@ git_tools:
 
 homebrew_repos:
   - aws/tap
-  - homebrew/casks-fonts
+  - homebrew/cask-fonts
 
 homebrew_tools:
   - awscli
@@ -52,7 +52,7 @@ homebrew_tools:
 
 
 homebrew_casks:
-  - font-hack-nerdfont
+  - font-hack-nerd-font
   - iterm2
   - slack
   - authy
