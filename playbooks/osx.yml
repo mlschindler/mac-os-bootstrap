@@ -69,10 +69,12 @@
 ## Clone dotfiles and notity handler
     - name: Get dotfiles
       git:
-        repo: "git@github.com:mlschindler/dotfiles.git"
+        repo: "{{ item}}"
         dest: "~/.cfg"
         clone: yes
         bare: yes
+      loop:
+        - 'git@github.com:mlschindler/dotfiles.git'
       notify: source_config
       tags:
         - get_dotfiles
