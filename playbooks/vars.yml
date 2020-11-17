@@ -49,6 +49,7 @@ homebrew_tools:
   - watch
   - wget
   - wtfutil
+  - tldr
 
 
 homebrew_casks:
