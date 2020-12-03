@@ -60,6 +60,7 @@ homebrew_casks:
   - signal
   - google-cloud-sdk
   - docker
+  - spotify
 
 pip_tools:
   - virtualenv
