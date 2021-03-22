@@ -50,6 +50,7 @@ homebrew_tools:
   - wget
   - wtfutil
   - tldr
+  - grex
 
 
 homebrew_casks:
