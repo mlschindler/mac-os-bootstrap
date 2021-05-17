@@ -10,7 +10,7 @@ if [ -f usr/local/bin/brew ]; then
   echo -e "${GREEN}[+]${NC} ${YELLOW}Homebrew already installed!${NC}"
 else
   echo -e "${YELLOW}[+]${NC} Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   && echo -e "${GREEN}[+]${NC} Homebrew successfully installed!" \
   || echo -e "${RED}[X]${NC} Homebrew installation failed..."
 fi
