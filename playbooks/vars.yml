@@ -17,6 +17,7 @@ git_tools:
 homebrew_repos:
   - aws/tap
   - homebrew/cask-fonts
+  - lacework/tap
 
 homebrew_tools:
   - awscli
@@ -51,6 +52,7 @@ homebrew_tools:
   - wtfutil
   - tldr
   - grex
+  - lacework-cli
 
 
 homebrew_casks:
