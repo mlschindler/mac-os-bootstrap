@@ -58,7 +58,6 @@ homebrew_tools:
 homebrew_casks:
   - font-hack-nerd-font
   - iterm2
-  - slack
   - authy
   - signal
   - google-cloud-sdk
