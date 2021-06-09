@@ -18,6 +18,7 @@ homebrew_repos:
   - aws/tap
   - homebrew/cask-fonts
   - lacework/tap
+  - anchore/grype
 
 homebrew_tools:
   - awscli
@@ -53,6 +54,7 @@ homebrew_tools:
   - tldr
   - grex
   - lacework-cli
+  - grype
 
 
 homebrew_casks:
@@ -64,6 +66,8 @@ homebrew_casks:
   - docker
   - spotify
   - brave-browser
+  - postman
+  - xmind-zen
 
 pip_tools:
   - virtualenv
