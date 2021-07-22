@@ -55,6 +55,7 @@ homebrew_tools:
   - grex
   - lacework-cli
   - grype
+  - helm
 
 
 homebrew_casks:
@@ -68,6 +69,7 @@ homebrew_casks:
   - brave-browser
   - postman
   - xmind-zen
+  - zoom
 
 pip_tools:
   - virtualenv
