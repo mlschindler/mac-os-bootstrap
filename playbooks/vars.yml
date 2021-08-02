@@ -19,6 +19,7 @@ homebrew_repos:
   - homebrew/cask-fonts
   - lacework/tap
   - anchore/grype
+  - fluxcd/tap
 
 homebrew_tools:
   - awscli
@@ -56,6 +57,7 @@ homebrew_tools:
   - lacework-cli
   - grype
   - helm
+  - flux
 
 
 homebrew_casks:
