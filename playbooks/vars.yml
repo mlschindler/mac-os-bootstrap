@@ -72,6 +72,7 @@ homebrew_casks:
   - postman
   - xmind-zen
   - zoom
+  - session-manager-plugin
 
 pip_tools:
   - virtualenv
