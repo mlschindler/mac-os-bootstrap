@@ -19,6 +19,7 @@ homebrew_repos:
   - homebrew/cask-fonts
   - lacework/tap
   - anchore/grype
+  - fluxcd/tap
 
 homebrew_tools:
   - awscli
@@ -55,6 +56,8 @@ homebrew_tools:
   - grex
   - lacework-cli
   - grype
+  - helm
+  - flux
 
 
 homebrew_casks:
@@ -68,6 +71,8 @@ homebrew_casks:
   - brave-browser
   - postman
   - xmind-zen
+  - zoom
+  - session-manager-plugin
 
 pip_tools:
   - virtualenv
