@@ -25,7 +25,6 @@ homebrew_tools:
   - awscli
   - aws-sam-cli
   - bat
-  - cowsay
   - curl
   - diff-so-fancy
   - exa
@@ -57,7 +56,7 @@ homebrew_tools:
   - lacework-cli
   - grype
   - helm
-  - flux
+  - fluxcd/tap/flux
 
 
 homebrew_casks:
