@@ -57,6 +57,7 @@ homebrew_tools:
   - grype
   - helm
   - fluxcd/tap/flux
+  - azure-cli
 
 
 homebrew_casks:
