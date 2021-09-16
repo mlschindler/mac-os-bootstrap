@@ -58,6 +58,7 @@ homebrew_tools:
   - helm
   - fluxcd/tap/flux
   - azure-cli
+  - kind
 
 
 homebrew_casks:
