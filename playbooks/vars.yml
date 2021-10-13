@@ -59,6 +59,7 @@ homebrew_tools:
   - fluxcd/tap/flux
   - azure-cli
   - kind
+  - poetry
 
 
 homebrew_casks:
