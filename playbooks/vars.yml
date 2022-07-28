@@ -76,6 +76,7 @@ homebrew_casks:
   - xmind-zen
   - zoom
   - session-manager-plugin
+  - obsidian
 
 pip_tools:
   - virtualenv
