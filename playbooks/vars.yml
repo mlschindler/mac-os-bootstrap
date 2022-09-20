@@ -62,6 +62,7 @@ homebrew_tools:
   - poetry
   - calicoctl
   - kustomize
+  - stern
 
 
 homebrew_casks:
