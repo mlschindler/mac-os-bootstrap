@@ -1,3 +1,4 @@
+---
 directories:
   - .aws
   - .cfg
@@ -63,6 +64,7 @@ homebrew_tools:
   - calicoctl
   - kustomize
   - stern
+  - openconnect
 
 
 homebrew_casks:
@@ -84,3 +86,4 @@ pip_tools:
   - virtualenv
   - virtualenvwrapper
   - git-up
+  - openconnect-sso
