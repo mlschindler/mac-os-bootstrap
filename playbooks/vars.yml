@@ -65,6 +65,7 @@ homebrew_tools:
   - kustomize
   - stern
   - openconnect
+  - go
 
 
 homebrew_casks:
@@ -81,6 +82,7 @@ homebrew_casks:
   - zoom
   - session-manager-plugin
   - obsidian
+  - visual-studio-code
 
 pip_tools:
   - virtualenv
