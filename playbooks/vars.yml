@@ -83,6 +83,7 @@ homebrew_casks:
   - session-manager-plugin
   - obsidian
   - visual-studio-code
+  - snagit
 
 pip_tools:
   - virtualenv
