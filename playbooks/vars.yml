@@ -66,6 +66,8 @@ homebrew_tools:
   - stern
   - openconnect
   - go
+  - kubecolor
+  - carapace
 
 
 homebrew_casks:
@@ -78,7 +80,6 @@ homebrew_casks:
   - spotify
   - brave-browser
   - postman
-  - xmind-zen
   - zoom
   - session-manager-plugin
   - obsidian
